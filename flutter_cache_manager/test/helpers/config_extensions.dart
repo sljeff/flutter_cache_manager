@@ -1,6 +1,6 @@
 import 'package:file/file.dart';
-import 'package:flutter_cache_manager/src/config/config.dart';
-import 'package:flutter_cache_manager/src/storage/cache_object.dart';
+import 'package:flutter_cache_manager_plus/src/config/config.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_object.dart';
 import 'package:mockito/mockito.dart';
 
 import 'mock_cache_info_repository.dart';

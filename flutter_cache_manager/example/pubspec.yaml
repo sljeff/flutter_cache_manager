@@ -10,7 +10,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter:
     sdk: flutter
-  flutter_cache_manager:
+  flutter_cache_manager_plus:
     path: ../
   url_launcher: ^6.1.10
 

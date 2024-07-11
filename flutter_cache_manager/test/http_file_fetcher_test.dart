@@ -1,8 +1,8 @@
 import 'dart:typed_data';
 
 import 'package:clock/clock.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:flutter_cache_manager/src/compat/file_service_compat.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
+import 'package:flutter_cache_manager_plus/src/compat/file_service_compat.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
 import 'package:http/testing.dart';

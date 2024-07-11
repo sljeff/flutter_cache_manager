@@ -4,10 +4,10 @@ import 'dart:io';
 
 import 'package:clock/clock.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:flutter_cache_manager/src/cache_store.dart';
-import 'package:flutter_cache_manager/src/storage/cache_object.dart';
-import 'package:flutter_cache_manager/src/web/queue_item.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
+import 'package:flutter_cache_manager_plus/src/cache_store.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_object.dart';
+import 'package:flutter_cache_manager_plus/src/web/queue_item.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:uuid/uuid.dart';
 

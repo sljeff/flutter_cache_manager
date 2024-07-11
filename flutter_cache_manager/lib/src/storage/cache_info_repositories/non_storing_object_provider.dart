@@ -1,5 +1,5 @@
-import 'package:flutter_cache_manager/src/storage/cache_info_repositories/cache_info_repository.dart';
-import 'package:flutter_cache_manager/src/storage/cache_object.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_info_repositories/cache_info_repository.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_object.dart';
 
 class NonStoringObjectProvider implements CacheInfoRepository {
   @override

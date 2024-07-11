@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'cache_manager_test.dart';

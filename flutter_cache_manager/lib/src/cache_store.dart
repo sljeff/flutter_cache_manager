@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:flutter_cache_manager/src/storage/cache_object.dart';
-import 'package:flutter_cache_manager/src/storage/file_system/file_system.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_object.dart';
+import 'package:flutter_cache_manager_plus/src/storage/file_system/file_system.dart';
 
 ///Flutter Cache Manager
 ///Copyright (c) 2019 Rene Floor
@@ -33,6 +33,21 @@ class CacheStore {
         fileSystem = config.fileSystem,
         _cacheInfoRepository = config.repo.open().then((value) => config.repo);
 
+  // Even if it exists, it will not update the object's touched field.
+  Future<FileInfo?> checkFile(String key) async {
+    final cacheObject = await retrieveCacheData(key, touch: false);
+    if (cacheObject == null) {
+      return null;
+    }
+    final file = await fileSystem.createFile(cacheObject.relativePath);
+    return FileInfo(
+      file,
+      FileSource.Cache,
+      cacheObject.validTill,
+      cacheObject.url,
+    );
+  }
+
   Future<FileInfo?> getFile(String key, {bool ignoreMemCache = false}) async {
     final cacheObject =
         await retrieveCacheData(key, ignoreMemCache: ignoreMemCache);
@@ -62,7 +77,7 @@ class CacheStore {
   }
 
   Future<CacheObject?> retrieveCacheData(String key,
-      {bool ignoreMemCache = false}) async {
+      {bool ignoreMemCache = false, bool touch = true}) async {
     if (!ignoreMemCache && _memCache.containsKey(key)) {
       if (await _fileExists(_memCache[key])) {
         return _memCache[key];
@@ -70,7 +85,7 @@ class CacheStore {
     }
     if (!_futureCache.containsKey(key)) {
       final completer = Completer<CacheObject?>();
-      _getCacheDataFromDatabase(key).then((cacheObject) async {
+      _getCacheDataFromDatabase(key, touch: touch).then((cacheObject) async {
         if (cacheObject?.id != null && !await _fileExists(cacheObject)) {
           final provider = await _cacheInfoRepository;
           await provider.delete(cacheObject!.id!);
@@ -108,10 +123,11 @@ class CacheStore {
     return file.exists();
   }
 
-  Future<CacheObject?> _getCacheDataFromDatabase(String key) async {
+  Future<CacheObject?> _getCacheDataFromDatabase(String key,
+      {bool touch = true}) async {
     final provider = await _cacheInfoRepository;
     final data = await provider.get(key);
-    if (await _fileExists(data)) {
+    if (await _fileExists(data) && touch) {
       _updateCacheDataInDatabase(data!);
     }
     _scheduleCleanup();

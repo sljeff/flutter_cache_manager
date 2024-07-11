@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:clock/clock.dart';
-import 'package:flutter_cache_manager/src/web/mime_converter.dart';
+import 'package:flutter_cache_manager_plus/src/web/mime_converter.dart';
 import 'package:http/http.dart' as http;
 
 ///Flutter Cache Manager

@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:flutter_cache_manager/src/web/file_service.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
+import 'package:flutter_cache_manager_plus/src/web/file_service.dart';
 import 'package:mockito/mockito.dart';
 
 import '../mock.mocks.dart';

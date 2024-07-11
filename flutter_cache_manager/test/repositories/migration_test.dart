@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:flutter_cache_manager/src/storage/cache_object.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_object.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

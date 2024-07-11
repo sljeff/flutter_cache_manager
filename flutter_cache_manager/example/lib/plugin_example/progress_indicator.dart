@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
 
 /// A centered and sized [CircularProgressIndicator] to show download progress
 /// in the [DownloadPage].

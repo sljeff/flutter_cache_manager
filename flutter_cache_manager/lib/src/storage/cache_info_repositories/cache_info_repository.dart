@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:flutter_cache_manager/src/logger.dart';
-import 'package:flutter_cache_manager/src/storage/cache_object.dart';
+import 'package:flutter_cache_manager_plus/src/logger.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_object.dart';
 
 /// Base class for cache info repositories
 abstract class CacheInfoRepository {

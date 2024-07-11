@@ -1,4 +1,4 @@
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
 
 /// The DefaultCacheManager that can be easily used directly. The code of
 /// this implementation can be used as inspiration for more complex cache

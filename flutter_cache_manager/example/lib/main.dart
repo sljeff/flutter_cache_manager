@@ -3,14 +3,14 @@ import 'package:example/plugin_example/download_page.dart';
 import 'package:example/plugin_example/floating_action_button.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
 
 void main() {
   runApp(
     BaseflowPluginExample(
       pluginName: 'Flutter Cache Manager',
-      githubURL: 'https://github.com/Baseflow/flutter_cache_manager',
-      pubDevURL: 'https://pub.dev/packages/flutter_cache_manager',
+      githubURL: 'https://github.com/Baseflow/flutter_cache_manager_plus',
+      pubDevURL: 'https://pub.dev/packages/flutter_cache_manager_plus',
       pages: [CacheManagerPage.createPage()],
     ),
   );
@@ -19,7 +19,7 @@ void main() {
 
 const url = 'https://picsum.photos/200/300';
 
-/// Example [Widget] showing the functionalities of flutter_cache_manager
+/// Example [Widget] showing the functionalities of flutter_cache_manager_plus
 class CacheManagerPage extends StatefulWidget {
   const CacheManagerPage({super.key});
 

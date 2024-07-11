@@ -1,5 +1,5 @@
 import 'package:clock/clock.dart';
-import 'package:flutter_cache_manager/src/storage/cache_object.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_object.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

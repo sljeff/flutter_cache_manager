@@ -1,4 +1,4 @@
-import 'package:flutter_cache_manager/src/web/file_service.dart';
+import 'package:flutter_cache_manager_plus/src/web/file_service.dart';
 
 class MockFileFetcherResponse implements FileServiceResponse {
   final Stream<List<int>> _content;

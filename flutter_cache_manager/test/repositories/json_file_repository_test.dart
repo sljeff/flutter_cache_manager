@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:collection/collection.dart';
-import 'package:flutter_cache_manager/src/storage/cache_info_repositories/json_cache_info_repository.dart';
-import 'package:flutter_cache_manager/src/storage/cache_object.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_info_repositories/json_cache_info_repository.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_object.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../helpers/json_repo_helpers.dart';

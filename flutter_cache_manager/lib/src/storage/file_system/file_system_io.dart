@@ -1,6 +1,6 @@
 import 'package:file/file.dart' hide FileSystem;
 import 'package:file/local.dart';
-import 'package:flutter_cache_manager/src/storage/file_system/file_system.dart';
+import 'package:flutter_cache_manager_plus/src/storage/file_system/file_system.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 

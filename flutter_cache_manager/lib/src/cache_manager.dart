@@ -3,10 +3,10 @@ import 'dart:typed_data';
 
 import 'package:file/file.dart';
 import 'package:flutter/foundation.dart' show visibleForTesting;
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:flutter_cache_manager/src/cache_store.dart';
-import 'package:flutter_cache_manager/src/storage/cache_object.dart';
-import 'package:flutter_cache_manager/src/web/web_helper.dart';
+import 'package:flutter_cache_manager_plus/flutter_cache_manager_plus.dart';
+import 'package:flutter_cache_manager_plus/src/cache_store.dart';
+import 'package:flutter_cache_manager_plus/src/storage/cache_object.dart';
+import 'package:flutter_cache_manager_plus/src/web/web_helper.dart';
 import 'package:uuid/uuid.dart';
 
 ///Flutter Cache Manager
@@ -181,6 +181,8 @@ class CacheManager implements BaseCacheManager {
   Future<FileInfo?> getFileFromCache(String key,
           {bool ignoreMemCache = false}) =>
       _store.getFile(key, ignoreMemCache: ignoreMemCache);
+
+  Future<FileInfo?> checkFileInCache(String key) => _store.checkFile(key);
 
   ///Returns the file from memory if it has already been fetched
   @override
